@@ -29,7 +29,7 @@ func main() {
 }
 
 func initDB() *gorm.DB {
-	dsn := "user=postgres dbname=vyson_db sslmode=disable"
+	dsn := "user=postgres dbname=vyson_db port=5433 sslmode=disable"
 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {
 		panic("Failed to connect database")
